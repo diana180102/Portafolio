@@ -1,0 +1,13 @@
+---
+import 'flowbite';
+---
+
+<script is:inline>
+  if (!window.__flowbiteInitialized) {
+    import("flowbite/dist/flowbite.esm.js").then(({ initFlowbite }) => {
+      initFlowbite();
+      window.__flowbiteInitialized = true;
+    });
+  }
+</script>
+

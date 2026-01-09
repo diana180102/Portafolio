@@ -1,0 +1,227 @@
+---
+import { Image } from "astro:assets";
+import iconNube from "../../assets/icon-devops.webp";
+import iconDb from "../../assets/icons-base-de-datos.webp";
+import iconApi from "../../assets/icons-api.webp";
+import iconCode from "../../assets/icons-codigo.webp";
+import iconLanguage from "../../assets/icons-idiomas.webp";
+import iconLearn from "../../assets/icons-aprendizaje.webp";
+import iconResolution from "../../assets/icons-puzle.webp";
+import iconTeam from "../../assets/icons-equipo.webp";
+import Card from "../ui/Card.astro";
+---
+
+<section class="reveal w-full flex flex-col items-center bg-primary pb-8" id="skills">
+  <div
+    class="p-4 flex flex-col justify-center items-center text-center w-full"
+    data-aos="fade-up-left"
+  >
+    <p class="text-black text-3xl font-mono font-bold">
+      <span class="text-secondary">{"<"}</span> Mis Habilidades <span
+        class="text-secondary">{">"}</span
+      >
+    </p>
+  </div>
+
+  <!-- Skills Técnicos -->
+  <div
+    class="flex flex-col gap-6 w-full p-4 justify-between items-center max-w-7xl"
+  >
+    <h2 class="text-2xl text-accent font-mono font-semibold">
+      Skills Técnicos
+    </h2>
+
+    <div class="flex flex-col md:flex-row gap-4 w-full" data-aos="fade-down-left"
+    >
+      <!-- Backend -->
+      <Card
+        class="bg-background-2 border-secondary border-3 drop-shadow-xl/50 inset-shadow-sm"
+        
+      >
+        <div class="flex flex-col items-center justify-center">
+          <Image
+            src={iconApi}
+            alt="icon-api-backend"
+            class={"w-18 drop-shadow-xl"}
+            loading="lazy"
+            decoding="async"
+          />
+          <h3
+            class="text-lg font-sans font-medium text-center text-secondary mb-2"
+          >
+            Backend
+          </h3>
+        </div>
+
+        <ul class="font-mono text-center text-primary">
+          <li>Node.js</li>
+          <li>Nest.js</li>
+          <li>Express.js</li>
+          <li>Java</li>
+          <li>Spring Boot</li>
+        </ul>
+      </Card>
+
+      <!-- Frontend -->
+      <Card class="bg-background-2 border-secondary border-3 drop-shadow-xl/50">
+        <div class="flex flex-col items-center justify-center">
+          <Image
+            src={iconCode}
+            alt="icon-frontend-code"
+            class={"w-18 drop-shadow-xl"}
+            loading="lazy"
+            decoding="async"
+          />
+          <h3
+            class="text-lg font-sans font-medium text-center mb-2 text-secondary"
+          >
+            Frontend
+          </h3>
+        </div>
+        <ul class="font-mono text-center text-primary">
+          <li>React</li>
+          <li>Next.js</li>
+          <li>TypeScript</li>
+          <li>JavaScript</li>
+        </ul>
+      </Card>
+      <!-- Base de Datos -->
+      <Card class="bg-background-2 border-secondary border-3 drop-shadow-xl/50">
+        <div class="flex flex-col items-center justify-center">
+          <Image
+            src={iconDb}
+            alt="icon-database"
+            class={"w-18 drop-shadow8xl"}
+            loading="lazy"
+            decoding="async"
+          />
+          <h3
+            class="text-lg font-sans font-medium text-center text-secondary mb-2"
+          >
+            Base de Datos
+          </h3>
+        </div>
+        <ul class="font-mono text-center text-primary">
+          <li>MySQL</li>
+          <li>PostgreSQL</li>
+          <li>Oracle</li>
+        </ul>
+      </Card>
+
+      <!-- Otros -->
+      <Card class="bg-background-2 border-secondary border-3 drop-shadow-xl/50">
+        <div class="flex flex-col items-center justify-center">
+          <Image
+            src={iconNube}
+            alt="icon-cloud"
+            class={"w-18 drop-shadow8xl"}
+            loading="lazy"
+            decoding="async"
+          />
+          <h3
+            class="text-lg font-sans font-medium text-center text-secondary mb-2"
+          >
+            DevOps & Otros
+          </h3>
+        </div>
+        <ul class="font-mono text-center text-primary">
+          <li>Git</li>
+          <li>Docker</li>
+          <li>Postman</li>
+          <li>Swagger</li>
+        </ul>
+      </Card>
+    </div>
+  </div>
+
+  <!-- Skils Blandos -->
+  <div
+    class="flex flex-col gap-6 w-full p-4 justify-between items-center max-w-7xl"
+  >
+    <h2 class="text-2xl text-accent font-semibold font-mono">Skills Blandas</h2>
+    <div class="flex flex-col md:flex-row gap-4 w-full" data-aos="fade-down-right" data-delay="200">
+      <Card class="border-secondary border-3 bg-background-2 drop-shadow-xl/50">
+        <div class="flex flex-col items-center justify-center">
+          <Image
+            src={iconLanguage}
+            alt="icon-database"
+            class={"w-21 drop-shadow-xl"}
+            loading="lazy"
+            decoding="async"
+          />
+          <h3
+            class="text-lg font-sans font-medium text-center mb-2 text-secondary"
+          >
+            Idiomas
+          </h3>
+        </div>
+        <p class="font-mono text-white text-sm">
+          Mi idioma nativo es el Español y tengo conomientos en Inglés con un
+          nivel básico intermedio
+        </p>
+      </Card>
+      <Card class="border-secondary border-3 bg-background-2 drop-shadow-xl/50">
+        <div class="flex flex-col items-center justify-center">
+          <Image
+            src={iconResolution}
+            alt="icon-database"
+            class={"w-21 drop-shadow-xl"}
+            loading="lazy"
+            decoding="async"
+          />
+          <h3
+            class="text-lg font-sans font-medium text-center mb-2 text-secondary"
+          >
+            Resolución de Problemas
+          </h3>
+        </div>
+        <p class="font-mono text-white text-sm">
+          Soy una persona con un apetito por resolucionar problemas, buscando
+          siempre diferentes enfoques para determinar la solución más eficaz y
+          eficiente.
+        </p>
+      </Card>
+
+      <Card class="border-secondary border-3 bg-background-2 drop-shadow-xl/50">
+        <div class="flex flex-col items-center justify-center">
+          <Image
+            src={iconLearn}
+            alt="icon-database"
+            class={"w-21 drop-shadow-xl"}
+            loading="lazy"
+            decoding="async"
+          />
+          <h3
+            class="text-lg font-sans font-medium text-center mb-2 text-secondary"
+          >
+            Aprendizaje Continuo
+          </h3>
+        </div>
+        <p class="font-mono text-white text-sm">
+          Abierta siempre a aprender nuevas tecnologías y herramientas, siempre
+          buscando mejorar mis habilidades y conocimientos.
+        </p>
+      </Card>
+
+      <Card class="border-secondary border-3 bg-background-2 drop-shadow-xl/50">
+        <div class="flex flex-col items-center justify-center">
+          <Image
+            src={iconTeam}
+            alt="icon-database"
+            class={"w-21 drop-shadow-xl"}
+            loading="lazy"
+            decoding="async"
+          />
+          <h3 class="text-lg font-medium text-center mb-2 text-secondary">
+            Trabajo en Equipo
+          </h3>
+        </div>
+        <p class="font-mono text-white text-sm">
+          Capacidad de trabajar en equipo en un ambiente multidisciplinario,
+          multicultural y colaborativo. Busco colaborar con otros
+          desarrolladores para mejorar missm habilidades y conocimientos.
+        </p>
+      </Card>
+    </div>
+  </div>
+</section>

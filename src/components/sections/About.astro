@@ -1,0 +1,48 @@
+---
+import { Image } from "astro:assets";
+import profileImage from "../../assets/diana_mayorga.webp";
+---
+
+<section class="bg-primary flex flex-col items-center w-full" id="about">
+  <div
+    class="p-4 flex flex-col justify-center items-center text-center bg-secondary w-full"
+    data-aos="fade-left"
+  >
+    <p class="text-black text-3xl font-mono font-bold">
+      <span class="text-slate-100">{"<"}</span> Sobre Mi <span
+        class="text-slate-100">{">"}</span
+      >
+    </p>
+  </div>
+
+  <div
+    class="flex flex-col md:flex-row justify-center items-center gap-4 mt-8 p-4 max-w-6xl"
+  >
+    <!-- Image -->
+    <div class="flex justify-center md:w-1/2" data-aos="fade-down-right">
+      <Image
+        src={profileImage}
+        alt="Diana Mayorga"
+        class={"w-md rounded-2xl border-2 border-secondary drop-shadow-2xl"}
+      />
+    </div>
+    <!-- Text -->
+    <div class="md:w-1/2" data-aos="fade-right">
+      <p class="text-black text-lg font-mono">
+        Soy Diana Mayorga, Ingeniera de Sistemas apasionada por el desarrollo
+        backend y la construcción de APIs claras y mantenibles. Me enfoco en
+        diseñar soluciones bien pensadas, que puedan crecer de forma ordenada y
+        sostenible.
+      </p>
+      <p class="text-black text-lg font-mono">
+        Tengo conocimientos en frontend con React, lo que me permite entender la
+        interacción entre ambas capas y construir APIs orientadas a una mejor
+        experiencia de integración.
+      </p>
+      <p class="text-black text-lg font-mono">
+        Creo en la tecnología como un medio para crear soluciones que aporten
+        valor a la comunidad y mejoren la vida de las personas.
+      </p>
+    </div>
+  </div>
+</section>

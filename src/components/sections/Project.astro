@@ -1,0 +1,84 @@
+---
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+import TvMinimalPlay from "@lucide/astro/icons/tv-minimal-play";
+import Github from "@lucide/astro/icons/github";
+import FlowbiteInit from "../layout/FlowbiteInit.astro";
+
+const projects = await getCollection("projects");
+---
+
+<section class="p-8 pb-18 flex flex-col items-center w-full">
+  <div
+    class="flex flex-row w-full max-w-7xl flex-wrap gap-8 justify-center items-center drop-shadow-xl/50"
+  >
+    {
+      projects.map((project) => (
+        <div
+          class="flex flex-col items-center w-full bg-background-2 p-6 border border-secondary rounded-base shadow-xs md:max-w-4xl md:flex-row"
+          data-aos="zoom-in"
+        >
+          <div class="w-full">
+            <Image
+              class="object-cover w-full h-auto rounded-base md:w-110 mb-4 md:mb-0 rounded-5"
+              src={project.data.image}
+              alt={project.data.title}
+            />
+          </div>
+          {/* Details */}
+          <div class="flex flex-col w-full justify-between md:p-4 leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-secondary">
+              {project.data.title}
+            </h5>
+            <div class="overflow-x-auto scroll h-37.5 p-2">
+              <p class="mb-6  text-primary font-mono ">
+                {project.data.description}
+              </p>
+
+              <h5 class="font-sans font-medium mb-1 text-secondary">
+                Implementación Backend
+              </h5>
+              {project.data.backendFocus.map((back) => (
+                <ul class="font-mono text-primary flex flex-col gap-1 list-disc pl-5">
+                  <li>{back}</li>
+                </ul>
+              ))}
+            </div>
+
+            {/* Buttons */}
+            <div class="buttons mt-4">
+              {project.data.live && (
+                <a
+                  href={project.data.live}
+                  class="inline-flex gap-2 items-center w-auto text-black bg-secondary hover:bg-green-500 hover:text-white  font-medium  rounded-xs text-xs px-4 py-2 shadow-2 "
+                >
+                  <TvMinimalPlay size={15} /> Live
+                </a>
+              )}
+
+              {project.data.github && (
+                <a
+                  href={project.data.live}
+                  class="inline-flex gap-2 items-center w-auto text-black bg-secondary hover:bg-green-500 hover:text-white  font-medium  rounded-xs text-xs px-4 py-2 shadow-2 "
+                >
+                  <Github size={15} /> Github
+                </a>
+              )}
+            </div>
+
+            {/* Tags */}
+            <div class="flex flex-row gap-4 mt-8 items-center">
+              {project.data.tags.map((tag) => (
+                <span class="bg-success-soft hover:bg-success-medium border border-success-subtle text-fg-success-strong text-xs font-medium px-1.5 py-0.5 rounded shadow-1">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<FlowbiteInit client:load />

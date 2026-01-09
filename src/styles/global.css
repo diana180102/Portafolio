@@ -1,0 +1,142 @@
+@import "tailwindcss";
+@import "flowbite/src/themes/default";
+@plugin "flowbite/plugin";
+@source "../../node_modules/flowbite";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "Fira Code", monospace;
+  --color-primary: #f5f5f5;
+  --color-secondary: #5dd62c;
+  --color-accent: #337418;
+  --color-background: #0f0f0f;
+  --color-background-2: #202020;
+}
+
+html,
+body {
+  @apply m-0
+    
+    p-0
+    w-full
+    min-h-screen;
+}
+
+body {
+  @apply flex
+    flex-col
+    items-center;
+}
+
+main {
+  flex: 1;
+}
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  @apply w-full p-6 border rounded-base shadow-xs;
+}
+
+.scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-secondary) #e5e7eb;
+}
+
+.scroll::-webkit-scrollbar-track {
+  background: #4f46e5;
+  border-radius: 12px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background: #4f46e5;
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+.shadow-1 {
+  box-shadow: rgba(255, 255, 255, 0.582) 0px 2px 0px 0px, rgba(14, 30, 37, 0.32) 0px 2px 5px 0px;
+}
+
+.shadow-2{
+  box-shadow: rgba(168, 224, 177, 0.24) 0px 3px 8px;
+}
+
+[data-aos] {
+  pointer-events: auto;
+}
+
+
+[data-aos="new-animation"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+
+  &.aos-animate {
+    opacity: 1;
+  }
+
+  @media screen and (min-width: 768px) {
+    transform: translateX(100px);
+
+    &.aos-animate {
+      transform: translateX(0);
+    }
+  }
+}
+
+
+  body[data-aos-duration='4000'] [data-aos],
+  [data-aos][data-aos][data-aos-duration='4000'] {
+    transition-duration: 4000ms;
+  }
+
+section {
+  animation: fade-in 0.6s ease both;
+  animation-timeline: view();
+  animation-range: entry 20% cover 30%;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.boujee-text {
+  --bg-size: 400%;
+  --color-one: hsl(103 67% 51%);
+  --color-two: hsl(144, 100%, 39%);
+  --color-three: hsl(150, 96%, 45%);
+  font-family: var(--font-sans);
+  font-weight: 800;
+  background: linear-gradient(
+      90deg,
+      var(--color-one),
+      var(--color-two),
+      var(--color-one)
+    )
+    0 0 / var(--bg-size) 100%;
+  color: transparent;
+  background-clip: text;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .boujee-text {
+    animation: move-bg 8s linear infinite;
+  }
+  @keyframes move-bg {
+    to {
+      background-position: var(--bg-size) 0;
+    }
+  }
+}

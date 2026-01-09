@@ -11,10 +11,25 @@
   "dependencies": {
     "@astrojs/partytown": "^2.1.4",
     "@astrojs/react": "^4.4.2",
+    "@fontsource/fira-code": "^5.2.7",
+    "@fontsource/inter": "^5.2.8",
+    "@lucide/astro": "^0.562.0",
+    "@tailwindcss/vite": "^4.1.18",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
+    "aos": "^2.3.4",
     "astro": "^5.16.6",
+    "flowbite": "^4.0.1",
     "react": "^19.2.3",
-    "react-dom": "^19.2.3"
+    "react-dom": "^19.2.3",
+    "tailwindcss": "^4.1.18"
+  },
+  "description": "```sh npm create astro@latest -- --template basics ```",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/aos": "^3.0.7"
   }
 }
