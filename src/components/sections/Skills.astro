@@ -11,7 +11,10 @@ import iconTeam from "../../assets/icons-equipo.webp";
 import Card from "../ui/Card.astro";
 ---
 
-<section class="reveal w-full flex flex-col items-center bg-primary pb-8" id="skills">
+<section
+  class="w-full flex flex-col items-center pb-8 overflow-x-hidden"
+  id="skills"
+>
   <div
     class="p-4 flex flex-col justify-center items-center text-center w-full"
     data-aos="fade-up-left"
@@ -25,24 +28,23 @@ import Card from "../ui/Card.astro";
 
   <!-- Skills Técnicos -->
   <div
-    class="flex flex-col gap-6 w-full p-4 justify-between items-center max-w-7xl"
+    class="flex flex-col gap-6 px-4 justify-between items-center max-w-7xl mx-auto w-full"
   >
     <h2 class="text-2xl text-accent font-mono font-semibold">
       Skills Técnicos
     </h2>
 
-    <div class="flex flex-col md:flex-row gap-4 w-full" data-aos="fade-down-left"
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 w-full "
+      data-aos="fade-down-left"
     >
       <!-- Backend -->
-      <Card
-        class="bg-background-2 border-secondary border-3 drop-shadow-xl/50 inset-shadow-sm"
-        
-      >
+      <Card class="bg-background-2 border-secondary border-3 inset-shadow-sm">
         <div class="flex flex-col items-center justify-center">
           <Image
             src={iconApi}
             alt="icon-api-backend"
-            class={"w-18 drop-shadow-xl"}
+            class={"w-16 max-w-full h-auto drop-shadow-xl"}
             loading="lazy"
             decoding="async"
           />
@@ -63,12 +65,12 @@ import Card from "../ui/Card.astro";
       </Card>
 
       <!-- Frontend -->
-      <Card class="bg-background-2 border-secondary border-3 drop-shadow-xl/50">
+      <Card class="bg-background-2 border-secondary border-3">
         <div class="flex flex-col items-center justify-center">
           <Image
             src={iconCode}
             alt="icon-frontend-code"
-            class={"w-18 drop-shadow-xl"}
+            class={"w-16 max-w-full h-auto drop-shadow-xl"}
             loading="lazy"
             decoding="async"
           />
@@ -86,12 +88,12 @@ import Card from "../ui/Card.astro";
         </ul>
       </Card>
       <!-- Base de Datos -->
-      <Card class="bg-background-2 border-secondary border-3 drop-shadow-xl/50">
+      <Card class="bg-background-2 border-secondary border-3">
         <div class="flex flex-col items-center justify-center">
           <Image
             src={iconDb}
             alt="icon-database"
-            class={"w-18 drop-shadow8xl"}
+            class={"w-16 max-w-full h-auto drop-shadow8xl"}
             loading="lazy"
             decoding="async"
           />
@@ -109,12 +111,12 @@ import Card from "../ui/Card.astro";
       </Card>
 
       <!-- Otros -->
-      <Card class="bg-background-2 border-secondary border-3 drop-shadow-xl/50">
+      <Card class="bg-background-2 border-secondary border-3">
         <div class="flex flex-col items-center justify-center">
           <Image
             src={iconNube}
             alt="icon-cloud"
-            class={"w-18 drop-shadow8xl"}
+            class={"w-16 max-w-full h-auto drop-shadow8xl"}
             loading="lazy"
             decoding="async"
           />
@@ -136,16 +138,20 @@ import Card from "../ui/Card.astro";
 
   <!-- Skils Blandos -->
   <div
-    class="flex flex-col gap-6 w-full p-4 justify-between items-center max-w-7xl"
+    class="flex flex-col gap-6 px-4 pt-8 justify-between items-center max-w-7xl mx-auto w-full"
   >
     <h2 class="text-2xl text-accent font-semibold font-mono">Skills Blandas</h2>
-    <div class="flex flex-col md:flex-row gap-4 w-full" data-aos="fade-down-right" data-delay="200">
-      <Card class="border-secondary border-3 bg-background-2 drop-shadow-xl/50">
+    <div
+      class="grid grid-cols-1 md:grid-cols-4 gap-4"
+      data-aos="fade-down-right"
+      data-delay="200"
+    >
+      <Card class="border-secondary border-3 bg-background-2">
         <div class="flex flex-col items-center justify-center">
           <Image
             src={iconLanguage}
             alt="icon-database"
-            class={"w-21 drop-shadow-xl"}
+            class="w-16 max-w-full h-auto drop-shadow-xl"
             loading="lazy"
             decoding="async"
           />
@@ -160,12 +166,13 @@ import Card from "../ui/Card.astro";
           nivel básico intermedio
         </p>
       </Card>
-      <Card class="border-secondary border-3 bg-background-2 drop-shadow-xl/50">
+
+      <Card class="border-secondary border-3 bg-background-2">
         <div class="flex flex-col items-center justify-center">
           <Image
             src={iconResolution}
             alt="icon-database"
-            class={"w-21 drop-shadow-xl"}
+            class={"w-16 max-w-full h-auto drop-shadow-xl"}
             loading="lazy"
             decoding="async"
           />
@@ -182,12 +189,12 @@ import Card from "../ui/Card.astro";
         </p>
       </Card>
 
-      <Card class="border-secondary border-3 bg-background-2 drop-shadow-xl/50">
+      <Card class="border-secondary border-3 bg-background-2">
         <div class="flex flex-col items-center justify-center">
           <Image
             src={iconLearn}
             alt="icon-database"
-            class={"w-21 drop-shadow-xl"}
+            class={"w-16 max-w-full h-auto drop-shadow-xl"}
             loading="lazy"
             decoding="async"
           />
@@ -203,12 +210,12 @@ import Card from "../ui/Card.astro";
         </p>
       </Card>
 
-      <Card class="border-secondary border-3 bg-background-2 drop-shadow-xl/50">
+      <Card class="border-secondary border-3 bg-background-2">
         <div class="flex flex-col items-center justify-center">
           <Image
             src={iconTeam}
             alt="icon-database"
-            class={"w-21 drop-shadow-xl"}
+            class={"w-16 max-w-full h-auto drop-shadow-xl"}
             loading="lazy"
             decoding="async"
           />

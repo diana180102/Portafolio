@@ -9,7 +9,7 @@ const certifacatesSort = certificates.sort((a, b) => b.year - a.year);
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-8">
     {
       certifacatesSort.map((cert) => (
-        <article class="rounded-xl border border-accent p-4 hover:scale-105 transition" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="1100"  >
+        <article class="rounded-xl border border-accent p-4 hover:scale-105 transition" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="900"  >
           <div class="h-75 flex flex-col items-center">
             <img
               src={`${CLOUD}/${cert.image}.webp`}
@@ -24,7 +24,7 @@ const certifacatesSort = certificates.sort((a, b) => b.year - a.year);
             {cert.issuer} · {cert.year}
           </p>
 
-          <div class="flex flex-row gap-2 p-2">
+          <div class="flex flex-row flex-wrap w-full gap-2 p-2">
             {cert.tags.map((tag) => (
               <p class="bg-success-soft border border-accent text-accent text-xs font-medium px-1.5 py-0.5 rounded">
                 {tag}

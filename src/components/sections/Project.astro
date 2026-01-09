@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 import TvMinimalPlay from "@lucide/astro/icons/tv-minimal-play";
 import Github from "@lucide/astro/icons/github";
-import FlowbiteInit from "../layout/FlowbiteInit.astro";
+
 
 const projects = await getCollection("projects");
 ---
@@ -67,7 +67,7 @@ const projects = await getCollection("projects");
             </div>
 
             {/* Tags */}
-            <div class="flex flex-row gap-4 mt-8 items-center">
+            <div class="flex flex-row flex-wrap gap-4 mt-8 items-center w-full">
               {project.data.tags.map((tag) => (
                 <span class="bg-success-soft hover:bg-success-medium border border-success-subtle text-fg-success-strong text-xs font-medium px-1.5 py-0.5 rounded shadow-1">
                   {tag}
@@ -81,4 +81,4 @@ const projects = await getCollection("projects");
   </div>
 </section>
 
-<FlowbiteInit client:load />
+
