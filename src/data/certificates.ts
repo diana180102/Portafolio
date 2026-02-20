@@ -88,5 +88,14 @@ export const certificates = [
     verifyUrl:
       "https://res.cloudinary.com/de2fhcgf3/image/upload/v1767905228/certificado-qa-manual_ksiu6d.webp",
     tags: ["QA"],
+  },
+  {
+    id: "fygzgo",
+    title: "Docker - Guia práctica de uso para desarrolladores", 
+    issuer:"DevTalles",
+    year:2026,
+    image:"Diana_Mayorga_-_Docker_-_2026-02-19_fygzgo",
+    verifyUrl: "https://res.cloudinary.com/de2fhcgf3/image/upload/v1771561660/Diana_Mayorga_-_Docker_-_2026-02-19_fygzgo.webp",
+    tags: ["Docker"],
   }
 ];

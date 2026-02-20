@@ -10,7 +10,7 @@ const certifacatesSort = certificates.sort((a, b) => b.year - a.year);
     {
       certifacatesSort.map((cert) => (
         <article class="rounded-xl border border-accent p-4 hover:scale-105 transition" data-aos="flip-right" data-aos-duration="500" data-aos-delay="500"  >
-          <div class="h-75 flex flex-col items-center ">
+          <div class="h-75 flex flex-col items-center">
             <img
               src={`${CLOUD}/${cert.image}.webp`}
               alt={`Certificado ${cert.title}`}
