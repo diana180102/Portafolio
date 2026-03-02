@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
         fontFamily: {
-            sans: [ 'Inter', 'system-ui', 'sans-serif', 'Fire-code']
+            sans: [ 'Inter', 'system-ui', 'sans-serif', 'Fire-code'],
+            display: ['"Playfair Display"', 'serif']
         }
     },
   },

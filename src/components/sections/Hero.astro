@@ -2,13 +2,17 @@
 import FolderGit2 from "@lucide/astro/icons/folder-git-2";
 import Github from "@lucide/astro/icons/github";
 import Linkedin from "@lucide/astro/icons/linkedin";
+import Gitlab from "@lucide/astro/icons/gitlab";
 import Mailbox from "@lucide/astro/icons/mailbox";
-import SmartphoneNfc from "@lucide/astro/icons/smartphone-nfc";
-import FlowbiteInit from "../layout/FlowbiteInit.astro";
 import FileUser from "@lucide/astro/icons/file-user";
+import Image from "astro/components/Image.astro";
+import profileImage from "../../assets/diana_mayorga.webp";
+import { Copy, Mail } from "@lucide/astro";
+import { IconBrandLinkedinFilled } from '@tabler/icons-react';
+import { IconPointFilled } from '@tabler/icons-react';
 ---
 
-<section
+<!-- <section
   class="bg-black min-h-screen flex flex-col items-center justify-center"
 >
   <div
@@ -74,6 +78,174 @@ import FileUser from "@lucide/astro/icons/file-user";
 
     
   </div>
+</section> -->
+<section
+  class="bg-[#FAFAFA] flex flex-col items-center justify-center pb-20 pt-32 lg:pt:48 lg:pb-32 overflow-hidden"
+>
+  <div
+    class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center justify-center mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+  >
+    <!-- Hero Details -->
+    <div
+      class="flex flex-col justify-center items-center lg:items-start lg:justify-start w-full lg:w-1/2 text-center lg:text-left"
+    >
+      <!-- tag -->
+      <div class="flex flex-row flex-wrap gap-4 mt-8 items-center justify-center lg:justify-start w-full mb-2">
+        
+        <span
+          class="bg-green-300 hover:bg-success-medium text-green-800 text-2xs font-medium px-2 py-1  rounded shadow-2 flex items-center justify-center text-center"
+        >
+          <IconPointFilled  size={20}/> DISPONIBLE PARA TRABAJAR
+        </span>
+      </div>
+
+      <!-- Details -->
+      <div class="flex flex-col gap-2">
+        <h1 class="text-5xl lg:text-6xl font-bold mb-6 font-sans">
+          Soy <span class="italic font-secondary text-green-500"
+            >Diana Mayorga</span
+          >, Ingeniera de Sistemas
+        </h1>
+
+        <p
+          class="font-sans text-md md:text-lg text-subtext mb-8 max-w-2xl mx-auto lg:mx-0 leading- text-[#666666]"
+        >
+         Me especializo en desarrollo backend, construyendo APIs robustas y aplicaciones escalables implementando arquitecturas limpias.
+        </p>
+      </div>
+
+      <!-- Buttons call to action -->
+      <div class="flex flex-row gap-4 w-full  justify-center lg:justify-start">
+        <a
+          href="/cv/ES_Diana_Mayorga_backend.pdf"
+          download
+          class="flex items-center justify-center gap-2 font-sans text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-base text-sm px-4 py-2.5 text-center leading-5"
+          ><FileUser size={15} /> Descargar CV</a
+        >
+
+        <div class="w-full max-w-[16rem]">
+          <div class="relative">
+            <label for="email-copy-button" class="sr-only">Label</label>
+            <input
+              id="email-copy-button"
+              type="text"
+              class="col-span-6 bg-neutral-secondary-medium border border-default-medium text-body hover:text-green-500 text-sm rounded-base focus:ring-brand focus:border-brand block w-full px-8 py-2.5 shadow-xs placeholder:text-body"
+              value="dianacm1806@gmail.com"
+              aria-label="Copy code"
+              disabled
+              readonly
+            />
+            <Mail size={15} class="absolute top-1/2 left-2 -translate-y-1/2" />
+            <button
+              data-copy-to-clipboard-target="email-copy-button"
+              data-tooltip-target="tooltip-copy-email-copy-button"
+              class="absolute end-2 top-1/2 -translate-y-1/2 text-body hover:text-green-500 hover:bg-neutral-quaternary rounded p-1.5 inline-flex items-center justify-center"
+            >
+              <span id="default-icon">
+                <Copy size={15} />
+              </span>
+              <span id="success-icon" class="hidden">
+                <Copy size={15} />
+              </span>
+            </button>
+            <div
+              id="tooltip-copy-email-copy-button"
+              role="tooltip"
+              class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-dark rounded-base shadow-xs opacity-0 tooltip"
+            >
+              <span id="default-tooltip-message">Copiar email</span>
+              <span id="success-tooltip-message" class="hidden">Copiado</span>
+              <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social media -->
+      <div class="flex sm:justify-center mt-10">
+        <a
+          href="https://github.com/diana180102"
+          class="text-green-500 hover:text-green-600   ms-5"
+        >
+          <Github color="oklch(72.3% 0.219 149.579)" size={30} />
+        </a>
+        <a
+          href="https://gitlab.com/diana180102"
+          class="text-green-500 hover:text-green-600  ms-5"
+        >
+          <Gitlab color="oklch(72.3% 0.219 149.579)" size={30} />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/dianamayorga18/"
+          class="text-green-500 hover:text-green-600  ms-5"
+        >  
+          <IconBrandLinkedinFilled color="oklch(72.3% 0.219 149.579)" size={30} /> 
+          
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero photo profile -->
+    <div class="w-full lg:w-1/2 relative" data-aos="fade-down-right">
+        <div class="relative z-10 w-full max-w-md mx-auto lg:max-w-full">
+      <div
+        class="relative rounded-3xl overflow-hidden shadow-2xl shadow-secondary/20 border-8 border-white"
+      >
+          <Image
+            src={profileImage}
+            alt="Diana Mayorga, Ingeniera de Sistemas y desarrolladora de software con enfasis en construcción de APIs escalables"
+            class={"w-full md:aspect-4/5 lg:aspect-square object-cover"}
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener("load", function () {
+      const clipboard = FlowbiteInstances.getInstance(
+        "CopyClipboard",
+        "email-copy-button",
+      );
+      const tooltip = FlowbiteInstances.getInstance(
+        "Tooltip",
+        "tooltip-copy-email-copy-button",
+      );
+
+      const $defaultIcon = document.getElementById("default-icon");
+      const $successIcon = document.getElementById("success-icon");
+
+      const $defaultTooltipMessage = document.getElementById(
+        "default-tooltip-message",
+      );
+      const $successTooltipMessage = document.getElementById(
+        "success-tooltip-message",
+      );
+
+      clipboard.updateOnCopyCallback((clipboard) => {
+        showSuccess();
+
+        // reset to default state
+        setTimeout(() => {
+          resetToDefault();
+        }, 2000);
+      });
+
+      const showSuccess = () => {
+        $defaultIcon.classList.add("hidden");
+        $successIcon.classList.remove("hidden");
+        $defaultTooltipMessage.classList.add("hidden");
+        $successTooltipMessage.classList.remove("hidden");
+        tooltip.show();
+      };
+
+      const resetToDefault = () => {
+        $defaultIcon.classList.remove("hidden");
+        $successIcon.classList.add("hidden");
+        $defaultTooltipMessage.classList.remove("hidden");
+        $successTooltipMessage.classList.add("hidden");
+        tooltip.hide();
+      };
+    });
+  </script>
 </section>
-
-

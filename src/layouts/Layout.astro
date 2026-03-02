@@ -5,8 +5,11 @@ import "../styles/global.css";
 // Fonts
 import "@fontsource/inter/400.css"; // Regular
 import "@fontsource/inter/600.css"; // Semi-bold
+import "@fontsource/inter/700.css"; // Bold
 import "@fontsource/fira-code/400.css"; // Regular
 import "@fontsource/fira-code/600.css"; // Semi-bold
+import "@fontsource/playfair-display/400-italic.css";
+import "@fontsource/playfair-display/700-italic.css";
 
 import Footer from "../components/layout/Footer.astro";
 import { ClientRouter } from "astro:transitions";
@@ -32,7 +35,7 @@ const { title } = Astro.props;
   <body>
     <div class="flex min-h-screen flex-col w-full">
       <Navbar />
-      <main class="w-full flex-1 pt-20">
+      <main class="w-full flex-1">
         <slot />
       </main>
       <Footer />

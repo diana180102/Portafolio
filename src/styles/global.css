@@ -6,6 +6,8 @@
 @theme {
   --font-sans: "Inter", sans-serif;
   --font-mono: "Fira Code", monospace;
+  --font-secondary: "Playfair Display", serif;
+
   --color-primary: #f5f5f5;
   --color-secondary: #5dd62c;
   --color-accent: #337418;

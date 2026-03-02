@@ -1,20 +1,24 @@
 ---
-import { Skull, FileCodeCorner } from '@lucide/astro';
 
 ---
   
-<header class="w-full bg-black fixed top-0 left-0 z-50 p-4">
-<nav class=" h-20 max-w-7xl w-full mx-auto rounded-2xl p-1 border border-secondary ">
+<header class="w-full fixed top-0 left-0 z-50 bg-white">
+<nav class=" w-full mx-auto">
 
     <div class="flex flex-wrap items-center justify-between max-w-7xl mx-auto p-4">
         <div class="flex items-center justify-center space-x-3 rtl:space-x-reverse">
-            <FileCodeCorner color="#5DD62C" />
-            <span class="self-center text-sm md:text-lg font-normal whitespace-nowrap text-white font-sans">Ing.Diana Mayorga</span>
+            <!-- <FileCodeCorner color="#5DD62C" /> -->
+            <p class="text-lg text-green-500 font-bold italic font-secondary">
+                Ing. <span class="self-center  whitespace-nowrap text-black font-sans  not-italic ">Diana Mayorga</span>
+            </p>
+            
+           
+            
         </div>
         <!-- Botón de menu -->
         <div class="flex items-center lg:order-2 space-x-1 lg:space-x-2 rtl:space-x-reverse">
             
-            <button data-collapse-toggle="mega-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-[#63F88B] rounded-lg lg:hidden  hover:text-[#BBFCCC] focus:outline-none focus:ring-1 focus:ring-default" aria-controls="mega-menu" aria-expanded="false">
+            <button data-collapse-toggle="mega-menu" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-green-500 rounded-lg lg:hidden  hover:text-[#BBFCCC] focus:outline-none focus:ring-1 focus:ring-default" aria-controls="mega-menu" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
                 <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14"/></svg>
             </button>
@@ -22,29 +26,29 @@ import { Skull, FileCodeCorner } from '@lucide/astro';
 
 
         <div id="mega-menu" class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1">
-            <ul class="flex flex-col mt-8 rounded-xs bg-secondary lg:bg-transparent arounded-base font-700 font-sans font-medium lg:border-0 lg:flex-row lg:mt-0 lg:space-x-8 rtl:space-x-reverse">
+            <ul class="flex flex-col mt-8 rounded-xs bg-green-500 lg:bg-transparent arounded-base font-700 font-sans font-medium lg:border-0 lg:flex-row lg:mt-0 lg:space-x-8 rtl:space-x-reverse text-sm">
                 <li>
-                    <a href="/" class="block py-2 px-3 text-black  lg:text-secondary border-light hover:bg-primary font-sans font-light lg:hover:bg-transparent lg:border-0 lg:hover:text-primary lg:p-0" aria-current="page" data-astro-prefetch>Inicio</a>
+                    <a href="/" class="block py-2 px-3 lg:text-gray-700  text-gray-800 font-semibold border-light hover:bg-green-300 font-sans  lg:hover:bg-transparent lg:border-0 lg:hover:text-green-500 lg:p-0" aria-current="page" data-astro-prefetch>Sobre mí</a>
                 </li>
 
                 <li>
-                    <a href="/#about" class="block py-2 px-3 text-white  border-light font-sans font-light hover:bg-[#10c03f] lg:hover:bg-transparent lg:border-0 lg:hover:text-secondary lg:p-0" data-astro-prefetch>About</a>
+                    <a href="/#about" class="block py-2 px-3 lg:text-gray-700  text-gray-800 font-semibold font-sans  hover:bg-green-300 lg:hover:bg-transparent lg:border-0 lg:hover:text-green-500 lg:p-0" data-astro-prefetch>Experiencia</a>
                 </li>
 
                 
 
                 <li>
-                    <a href="/#experience" class="block py-2 px-3 text-white  border-light font-sans font-light hover:bg-[#10c03f] lg:hover:bg-transparent lg:border-0 lg:hover:text-secondary lg:p-0" data-astro-prefetch>Experiencia</a>
+                    <a href="/#experience" class="block py-2 px-3 lg:text-gray-700  text-gray-800 font-semibold  border-light font-sans  hover:bg-green-300 lg:hover:bg-transparent lg:border-0 lg:hover:text-green-500 lg:p-0" data-astro-prefetch>Habilidades</a>
                 </li>
                
                 <li>
-                    <a href="/projects" class="block py-2 px-3 text-white  border-light font-sans font-light hover:bg-[#10c03f] lg:hover:bg-transparent lg:border-0 lg:hover:text-secondary lg:p-0" data-astro-prefetch>Proyectos</a>
+                    <a href="/projects" class="block py-2 px-3 lg:text-gray-700  text-gray-800 font-semibold font-sans  hover:bg-green-300 lg:hover:bg-transparent lg:border-0 lg:hover:text-green-500 lg:p-0" data-astro-prefetch>Proyectos</a>
                 </li>
                 <li>
-                    <a href="/certificates" class="block py-2 px-3 text-white  border-light font-sans font-light hover:bg-[#10c03f] lg:hover:bg-transparent lg:border-0 lg:hover:text-secondary lg:p-0" data-astro-prefetch>Certificaciones</a>
+                    <a href="/certificates" class="block py-2 px-3 lg:text-gray-700  text-gray-800 font-semibold   border-light font-sans  hover:bg-green-300 lg:hover:bg-transparent lg:border-0 lg:hover:text-green-500 lg:p-0" data-astro-prefetch>Certificaciones</a>
                 </li>
                 <li>
-                    <a href="#footer" class="block py-2 px-3 text-white  border-light font-sans font-light hover:bg-[#10c03f] lg:hover:bg-transparent lg:border-0 lg:hover:text-secondary lg:p-0" data-astro-prefetch>Contacto</a>
+                    <a href="#footer" class="block py-2 px-3 lg:text-gray-700  text-gray-800 font-semibold  border-light font-sans  hover:bg-green-300 lg:hover:bg-transparent lg:border-0 lg:hover:text-green-500 lg:p-0" data-astro-prefetch>Contactame</a>
                 </li>
             </ul>
         </div>
