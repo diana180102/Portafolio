@@ -1,11 +1,12 @@
 ---
 import { Image } from "astro:assets";
 import Card from "../ui/Card.astro";
-import team from "../../assets/team.svg";
-import brain from "../../assets/brain.svg";
+import Team from "../../assets/team.svg";
+import Brain from "../../assets/brain.svg";
 import learn from "../../assets/learn.svg";
-import puzzle from "../../assets/puzzle.svg";
+import Puzzle from "../../assets/puzzle.svg";
 import { IconMapPinFilled, IconWorldFilled } from "@tabler/icons-react";
+
 ---
 
 <section
@@ -70,7 +71,7 @@ import { IconMapPinFilled, IconWorldFilled } from "@tabler/icons-react";
         <Card
           class="bg-[#f8f8f8] w-54.5 h-48 flex flex-col justify-center items-center gap-2 text-center shadow-1"
         >
-          <Image src={team} alt="Trabajo en equipo" width={30} height={30} />
+          <Team class={"text-[#F27B5C] w-10 h-10"} />
           <h3 class="font-semibold text-sm font-primary">Trabajo en equipo</h3>
           <p class="text-xs text-secondary font-normal">
             Trabajo en equipo y colaboración para lograr objetivos comunes
@@ -79,11 +80,11 @@ import { IconMapPinFilled, IconWorldFilled } from "@tabler/icons-react";
         <Card
           class="bg-black w-54.5 h-48 flex flex-col justify-center items-center gap-2 text-center shadow-1"
         >
-          <Image src={brain} alt="Trabajo en equipo" width={30} height={30} />
+          <Brain class={"text-green-500 w-10 h-10"} />
           <h3 class="font-semibold text-sm font-primary text-white">
             Analítica
           </h3>
-          <p class="text-xs font-normal text-white">Atención al detalle</p>
+          <p class="text-xs font-normal text-white">Atención al detalle y resolución de problemas</p>
         </Card>
       </div>
 
@@ -100,9 +101,9 @@ import { IconMapPinFilled, IconWorldFilled } from "@tabler/icons-react";
         <Card
           class="bg-[#f8f8f8] w-54.5 h-48 flex flex-col justify-center items-center gap-2 text-center shadow-1"
         >
-          <Image src={puzzle} alt="Trabajo en equipo" width={30} height={30} />
+          <Puzzle class={"text-[#F2A75C] w-10 h-10"} />
           <h3 class="font-semibold text-sm font-primary">
-            Resolución de problemas
+            Comunicación Efectiva
           </h3>
           <p class="text-xs text-secondary font-normal">Enfoque lógico</p>
         </Card>
