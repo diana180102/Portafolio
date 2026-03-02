@@ -2,23 +2,20 @@
 import FlowbiteInit from "../layout/FlowbiteInit.astro";
 ---
 
-<section class="w-full flex flex-col items-center bg-background" id="experience">
-  <div
-    class="p-4 flex flex-col justify-center items-center text-center bg-secondary w-full"
-    data-aos="fade-left"
-  >
-    <p class="text-black text-3xl font-mono font-bold">
-      <span class="text-slate-100">{"<"}</span> Experiencia <span
-        class="text-slate-100">{">"}</span
-      >
-    </p>
-  </div>
+<section
+  class="w-full flex flex-col items-center bg-background-2 pb-20 pt-32"
+  id="experience"
+>
+ <div class="flex flex-col items-center justify-center text-center gap-4 mb-10">
+  <h2 class="text-4xl font-bold text-white font-primary">Mi <span class="text-green-500 font-secondary">Trayectoria</span></h2>
+  <p class="text-white">Experiencia laboral y crecimiento profesional</p>
+ </div>
 
   <div
-    class="p-8 max-w-7xl w-full flex flex-col items-center justify-center"
+    class="p-8 max-w-7xl w-full flex flex-col items-center justify-center "
     data-aos="flip-down"
   >
-    <ol class="relative border-s border-secondary">
+    <ol class="relative border-s border-accent">
       <li class="mb-10 ms-4">
         <div
           class="absolute w-3 h-3 bg-neutral-quaternary rounded-full mt-1.5 -start-1.5 border border-buffer"
@@ -30,8 +27,8 @@ import FlowbiteInit from "../layout/FlowbiteInit.astro";
           Primarket
         </h3>
         <p class="font-light text-xs text-primary">Junio 2025 - Actualidad</p>
-        <h4 class="text-md font-semibold text-mono text-secondary my-2">
-          Backend Developer
+        <h4 class="text-md font-semibold text-mono text-green-500 my-2">
+          Tech Leader - Backend Developer
         </h4>
 
         <ul class="mb-4 font-light text-sm font-sans text-primary">
@@ -43,7 +40,12 @@ import FlowbiteInit from "../layout/FlowbiteInit.astro";
             arquitectura y revisiones de código.
           </li>
 
-          <li>• Desarrollo y mantenimiento de APIs REST y GraphQL.</li>
+          <li>• Desarrollo y mantenimiento de APIs REST</li>
+          <li>
+            • Impulsé la transición de una arquitectura MVC a hexagonal,
+            promoviendo una mejor separación de responsabilidades y mayor
+            mantenibilidad del proyecto..
+          </li>
         </ul>
       </li>
 
@@ -58,19 +60,26 @@ import FlowbiteInit from "../layout/FlowbiteInit.astro";
           Foo Talent
         </h3>
         <p class="font-light text-xs text-primary">Marzo 2025 - Junio 2025</p>
-        <h4 class="text-md font-semibold text-mono text-secondary my-2">
+        <h4 class="text-md font-semibold text-mono text-green-500 my-2">
           Backend Developer
         </h4>
 
         <ul class="mb-4 font-light text-sm font-sans text-primary">
-          <li>• Construi el APIs REST de MatchPets</li>
           <li>
-            • Garantice la protección de la API y la integridad de los datos.
+            • Diseñé e implementé las APIs REST de MatchPets siguiendo
+            principios de arquitectura limpia y buenas prácticas.
           </li>
 
           <li>
-            • Documente el APIs con Swagger para que frontend y QA puedan usar
-            los servicios.
+            • Implementé mecanismos de seguridad y validación para garantizar la
+            protección de la API y la integridad de los datos (autenticación,
+            autorización y manejo de excepciones).
+          </li>
+
+          <li>
+            • Documenté los servicios utilizando Swagger/OpenAPI, facilitando la
+            integración con frontend y el proceso de pruebas por parte del
+            equipo de QA.
           </li>
         </ul>
       </li>
@@ -88,23 +97,22 @@ import FlowbiteInit from "../layout/FlowbiteInit.astro";
         <p class="font-light text-xs text-primary">
           Junio 2022 - Diciembre 2024
         </p>
-        <h4 class="text-md font-semibold text-mono text-secondary my-2">
+        <h4 class="text-md font-semibold text-mono text-green-500 my-2">
           Frontend Developer
         </h4>
 
         <ul class="mb-4 font-light text-sm font-sans text-primary">
           <li>
-            • Desarrolle landing pages para el lanzamiento de productos
-            digitales generando más de 100 leads.
+            • Desarrollé landing pages para el lanzamiento de productos
+            digitales, generando más de 100 leads calificados.
           </li>
+
           <li>
-            • Se aplico SEO y optimización de contenido para mejorar la
-            experiencia del usuario.
+            • Implementé estrategias de SEO y optimización de contenido,
+            mejorando la visibilidad orgánica y la experiencia del usuario.
           </li>
         </ul>
       </li>
     </ol>
   </div>
 </section>
-
-

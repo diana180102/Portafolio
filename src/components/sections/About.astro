@@ -1,48 +1,112 @@
 ---
 import { Image } from "astro:assets";
-import profileImage from "../../assets/diana_mayorga.webp";
+import Card from "../ui/Card.astro";
+import team from "../../assets/team.svg";
+import brain from "../../assets/brain.svg";
+import learn from "../../assets/learn.svg";
+import puzzle from "../../assets/puzzle.svg";
+import { IconMapPinFilled, IconWorldFilled } from "@tabler/icons-react";
 ---
 
-<section class="bg-primary flex flex-col items-center w-full" id="about">
+<section
+  class="bg-white flex flex-col items-center w-full pb-20 pt-32"
+  id="about"
+>
   <div
-    class="p-4 flex flex-col justify-center items-center text-center bg-secondary w-full"
-    data-aos="fade-left"
+    class="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center justify-center mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
   >
-    <p class="text-black text-3xl font-mono font-bold">
-      <span class="text-slate-100">{"<"}</span> Sobre Mi <span
-        class="text-slate-100">{">"}</span
-      >
-    </p>
-  </div>
+    <!-- Description profile -->
+    <div class="lg:w-1/2 w-full ">
+      <h2 class="text-4xl font-bold text-black mb-6">
+        Sobre
+        <span class="text-green-500 font-secondary">Mí</span>
+      </h2>
 
-  <div
-    class="flex flex-col md:flex-row justify-center items-center gap-4 mt-8 p-4 max-w-6xl"
-  >
-    <!-- Image -->
-    <div class="flex justify-center md:w-1/2" data-aos="fade-down-right">
-      <Image
-        src={profileImage}
-        alt="Diana Mayorga"
-        class={"w-md rounded-2xl border-2 border-secondary drop-shadow-2xl"}
-      />
+      <div class="w-20 h-1 bg-green-500 mb-8"></div>
+
+      <div class="flex flex-col gap-3">
+        <p class="text-secondary font-normal">
+          Mi camino en la tecnología comenzó con la
+          curiosidad por entender qué sucede detrás de la pantalla, y hoy esa
+          curiosidad se ha convertido en una carrera enfocada en el desarrollo
+          backend y la construcción de soluciones sólidas y escalables.
+        </p>
+        <p class="text-secondary font-normal">
+          Trabajo principalmente con Spring Boot y NestJS para el desarrollo de
+          APIs claras y mantenibles, aplicando principios de arquitectura
+          hexagonal y buenas prácticas de diseño. Utilizo Docker para la
+          contenedorización de aplicaciones, asegurando entornos consistentes y
+          preparados para crecer.
+        </p>
+        <p class="text-secondary font-normal">
+          Tengo conocimientos en frontend con React, lo que me permite
+          comprender la integración entre ambas capas y diseñar servicios
+          orientados a una mejor experiencia de consumo. Mi objetivo es crear
+          soluciones tecnológicas eficientes, bien estructuradas y sostenibles
+          en el tiempo.
+        </p>
+
+        <p class="text-secondary font-normal">
+          Creo en la tecnología como un medio para crear soluciones que aporten
+          valor a la comunidad y mejoren la vida de las personas.
+        </p>
+      </div>
+
+      <div class="flex flex-row gap-6 mt-6">
+        <div class="flex flex-row gap-2">
+          <IconMapPinFilled stroke={2} color="#00bd74" />
+          <p>Bogotá, Colombia</p>
+        </div>
+        <div class="flex flex-row gap-2">
+          <IconWorldFilled stroke={2} color="#00bd74" />
+          <p>Español / Inglés A2</p>
+        </div>
+      </div>
     </div>
-    <!-- Text -->
-    <div class="md:w-1/2" data-aos="fade-right">
-      <p class="text-black text-lg font-mono">
-        Soy Diana Mayorga, Ingeniera de Sistemas apasionada por el desarrollo
-        backend y la construcción de APIs claras y mantenibles. Me enfoco en
-        diseñar soluciones bien pensadas, que puedan crecer de forma ordenada y
-        sostenible.
-      </p>
-      <p class="text-black text-lg font-mono">
-        Tengo conocimientos en frontend con React, lo que me permite entender la
-        interacción entre ambas capas y construir APIs orientadas a una mejor
-        experiencia de integración.
-      </p>
-      <p class="text-black text-lg font-mono">
-        Creo en la tecnología como un medio para crear soluciones que aporten
-        valor a la comunidad y mejoren la vida de las personas.
-      </p>
+
+    <!-- skills -->
+    <div class="lg:w-1/2 w-full grid grid-cols-2 gap-4">
+      <div class="space-y-4 mt-8">
+        <Card
+          class="bg-[#f8f8f8] w-54.5 h-48 flex flex-col justify-center items-center gap-2 text-center shadow-1"
+        >
+          <Image src={team} alt="Trabajo en equipo" width={30} height={30} />
+          <h3 class="font-semibold text-sm font-primary">Trabajo en equipo</h3>
+          <p class="text-xs text-secondary font-normal">
+            Trabajo en equipo y colaboración para lograr objetivos comunes
+          </p>
+        </Card>
+        <Card
+          class="bg-black w-54.5 h-48 flex flex-col justify-center items-center gap-2 text-center shadow-1"
+        >
+          <Image src={brain} alt="Trabajo en equipo" width={30} height={30} />
+          <h3 class="font-semibold text-sm font-primary text-white">
+            Analítica
+          </h3>
+          <p class="text-xs font-normal text-white">Atención al detalle</p>
+        </Card>
+      </div>
+
+      <div class="space-y-4">
+        <Card
+          class="bg-white w-54.5 h-48 flex flex-col justify-center items-center gap-2 text-center shadow-1"
+        >
+          <Image src={learn} alt="Trabajo en equipo" width={30} height={30} />
+          <h3 class="font-semibold text-sm font-primary">Curiosidad</h3>
+          <p class="text-xs text-secondary font-normal">
+            Curiosidad por aprender y mejorar mis habilidades
+          </p>
+        </Card>
+        <Card
+          class="bg-[#f8f8f8] w-54.5 h-48 flex flex-col justify-center items-center gap-2 text-center shadow-1"
+        >
+          <Image src={puzzle} alt="Trabajo en equipo" width={30} height={30} />
+          <h3 class="font-semibold text-sm font-primary">
+            Resolución de problemas
+          </h3>
+          <p class="text-xs text-secondary font-normal">Enfoque lógico</p>
+        </Card>
+      </div>
     </div>
   </div>
 </section>
