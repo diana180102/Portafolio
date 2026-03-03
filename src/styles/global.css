@@ -54,7 +54,7 @@ main {
 
 .scroll {
   scrollbar-width: thin;
-  scrollbar-color: var(--color-secondary) #e5e7eb;
+  scrollbar-color: #118d41 #e5e7eb;
 }
 
 .scroll::-webkit-scrollbar-track {

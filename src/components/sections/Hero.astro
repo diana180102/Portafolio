@@ -7,7 +7,7 @@ import Image from "astro/components/Image.astro";
 import profileImage from "../../assets/diana_mayorga.webp";
 import { Copy, Mail } from "@lucide/astro";
 
-import { IconBrandLinkedinFilled } from '@tabler/icons-react';
+import { IconBrandGithubFilled, IconBrandLinkedinFilled } from '@tabler/icons-react';
 import { IconPointFilled } from '@tabler/icons-react';
 ---
 
@@ -98,18 +98,21 @@ import { IconPointFilled } from '@tabler/icons-react';
       <div class="flex sm:justify-center mt-10">
         <a
           href="https://github.com/diana180102"
-          class="text-green-500 hover:text-green-600   ms-5"
+          target="_blank" 
+          class="text-green-500 hover:text-green-600 ms-5"
         >
-          <Github color="oklch(72.3% 0.219 149.579)" size={30} />
+          <IconBrandGithubFilled color="oklch(72.3% 0.219 149.579)" size={30} />
         </a>
         <a
           href="https://gitlab.com/diana180102"
+          target="_blank" 
           class="text-green-500 hover:text-green-600  ms-5"
         >
           <Gitlab color="oklch(72.3% 0.219 149.579)" size={30} />
         </a>
         <a
           href="https://www.linkedin.com/in/dianamayorga18/"
+          target="_blank" 
           class="text-green-500 hover:text-green-600  ms-5"
         >  
           <IconBrandLinkedinFilled color="oklch(72.3% 0.219 149.579)" size={30} /> 
