@@ -71,7 +71,7 @@ const projects = await getCollection("projects");
             {/* Tags */}
             <div class="flex flex-row flex-wrap gap-4 mt-8 items-center w-full">
               {project.data.tags.map((tag) => (
-                <span class="bg-[#BBF7D0] hover:bg-success-medium border border-success-subtle text-[#166534] text-xs font-medium px-1.5 py-0.5 rounded shadow-2">
+                <span class="bg-[#BBF7D0] hover:bg-success-medium  text-[#166534] text-xs font-medium px-1.5 py-0.5 rounded shadow-2">
                   {tag}
                 </span>
               ))}

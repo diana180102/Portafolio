@@ -45,7 +45,10 @@ const { title } = Astro.props;
 </html>
 
 <!-- Script de Flowbite -->
-<script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"
+></script>
 
 <!-- Script para inicializar Flowbite y AOS -->
 <script>
@@ -75,7 +78,7 @@ const { title } = Astro.props;
   const refreshComponents = () => {
     // Refrescar AOS
     AOS.refresh();
-    
+
     // Re-inicializar Flowbite (importante para los event listeners)
     if (window.initFlowbite) {
       window.initFlowbite();
@@ -88,7 +91,7 @@ const { title } = Astro.props;
   // Después de cada navegación con View Transitions
   document.addEventListener("astro:page-load", () => {
     initializeComponents();
-    
+
     // Pequeño delay para asegurar que el DOM esté completamente renderizado
     setTimeout(() => {
       AOS.refresh();
@@ -104,3 +107,5 @@ const { title } = Astro.props;
   // Después del swap del contenido
   document.addEventListener("astro:after-swap", refreshComponents);
 </script>
+
+

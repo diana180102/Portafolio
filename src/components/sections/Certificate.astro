@@ -5,34 +5,41 @@ const CLOUD = "https://res.cloudinary.com/de2fhcgf3/image/upload";
 const certifacatesSort = certificates.sort((a, b) => b.year - a.year);
 ---
 
-<section class="w-full">
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-8">
-    {
-      certifacatesSort.map((cert) => (
-        <article class="rounded-xl border border-accent p-4 hover:scale-105 transition" data-aos="flip-right" data-aos-duration="500" data-aos-delay="500"  >
-          <div class="h-75 flex flex-col items-center">
-            <img
-              src={`${CLOUD}/${cert.image}.webp`}
-              alt={`Certificado ${cert.title}`}
-              loading="lazy"
-              class="rounded-lg h-full"
-            />
-          </div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 p-8 max-w-7xl">
+  {
+    certifacatesSort.map((cert) => (
+      <article
+        class="rounded-xl shadow-2 p-4 
+         transition-shadow duration-300 ease-out
+         hover:shadow-xl  bg-[#f8f8f8]"
+        data-aos="flip-right"
+        data-aos-duration="1000"
+        data-aos-delay="1000"
+      >
+        <div class="aspect-4/3 w-full">
+          <img
+            src={`${CLOUD}/${cert.image}.webp`}
+            alt={`Certificado ${cert.title}`}
+            loading="lazy"
+            class="h-full w-full object-contain 
+             transition-transform duration-300 ease-out
+             hover:scale-105 "
+          />
+        </div>
 
-          <h3 class="mt-2 text-black">{cert.title}</h3>
-          <p class="text-sm text-gray-400 font-mono">
-            {cert.issuer} · {cert.year}
-          </p>
+        <h3 class="mt-2 text-black text-xs lg:text-sm font-sans ">{cert.title}</h3>
+        <p class="text-sm text-gray-400 font-sans">
+          {cert.issuer} · {cert.year}
+        </p>
 
-          <div class="flex flex-row flex-wrap w-full gap-2 p-2">
-            {cert.tags.map((tag) => (
-              <p class="bg-success-soft border border-accent text-accent text-xs font-medium px-1.5 py-0.5 rounded">
-                {tag}
-              </p>
-            ))}
-          </div>
-        </article>
-      ))
-    }
-  </div>
-</section>
+        <div class="flex flex-row flex-wrap w-full gap-2 p-2">
+          {cert.tags.map((tag) => (
+            <p class="bg-[#BBF7D0]  text-[#166534]  text-xs font-medium px-1.5 py-0.5 rounded shadow-2">
+              {tag}
+            </p>
+          ))}
+        </div>
+      </article>
+    ))
+  }
+</div>
